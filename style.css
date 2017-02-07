@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+
+body {
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    width: 100%;
+    height: 180px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.quoteCollection {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.searchBar {
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.searchBar:focus {
+    outline: none;
+}
+
+.quote {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.author {
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-align: right;
+    margin-right: 60px;
+    color: #444;
+}
+
+.quoteBox {
+    border: 1px solid lightgray;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.quotesContainer {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.quotes {
+    padding: 40px 60px;
+}
+
+.removeQuote {
+    background: black;
+    height: 75px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 60px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    display: none;
+}
+
+.removeQuote:hover {
+    cursor: pointer;
+}
+
+.quoteBox:hover .removeQuote {
+    display: flex;
+}
+
+
+.addQuote {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    padding: 0 30px;
+    margin: 30px auto 10px auto;
+}
+
+.newQuote {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 210px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.newText {
+    width: 70%;
+    padding-left: 10px;
+}
+
+.newAuthor {
+    width: 120px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.addButton {
+    height: 40px;
+    width: 160px;
+    background: black;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+
+.addButton:hover {
+    cursor: pointer;
+}

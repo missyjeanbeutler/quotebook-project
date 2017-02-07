@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='quoteApp'>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reset.css"></link>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body ng-controller='MainControl'>
+
+    <header>
+        <div class="quoteCollection">Quote<br>Collection</div>
+        <input type="text" placeholder="Search quotes..." class="searchBar" ng-model="quoteFilter">
+    </header>
+
+    <div class="addQuote">
+        <div class='newQuote'>Add a quote</div>
+        <input type="text" class="newText" ng-model="newText" placeholder="Quote...">
+        <input type="text" class="newAuthor" ng-model="newAuthor" placeholder="Author...">
+        <div class='addButton' ng-click='addQuotes()'>Add</div>
+    </div>
+
+    <div class="quotesContainer">
+        <div ng-repeat='q in quotes | filter: quoteFilter' class='quoteBox'>
+            <div ng-hide='showDetails'>
+                <div class="removeQuote" ng-click='removeQuotes($index)'>
+                    <p>- Remove from Collection</p>
+                </div>
+                <div class="quotes">
+                    <p class='quote'>{{q.text}}</p>
+                    <p class="author">- {{q.author}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src='app.js'></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+</body>
+
+</html>
