@@ -118,10 +118,18 @@ header {
     padding-left: 10px;
 }
 
+.newText:focus {
+    outline: none;
+}
+
 .newAuthor {
     width: 120px;
     margin-left: 10px;
     padding-left: 10px;
+}
+
+.newAuthor:focus {
+    outline: none;
 }
 
 .addButton {
